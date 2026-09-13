@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Configure Nginx to redirect /redirect_me to a YouTube page
 
 apt-get update
 apt-get -y install nginx
