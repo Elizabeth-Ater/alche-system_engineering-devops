@@ -5,7 +5,15 @@ apt-get update
 apt-get -y install nginx
 
 cat > /var/www/html/404.html <<'EOF'
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404 Not Found</title>
+</head>
+<body>
 Ceci n'est pas une page
+</body>
+</html>
 EOF
 
 if ! grep -q "error_page 404 /404.html;" /etc/nginx/sites-enabled/default; then
